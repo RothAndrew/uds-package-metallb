@@ -6,17 +6,11 @@ metadata:
 
 variables:
   - name: IP_ADDRESS_POOL
+    description: The pool of IP addresses to use for ingress to the cluster
 
 components:
   - name: metallb
     required: true
-    actions:
-      onDeploy:
-        after:
-          - cmd: echo "Setting IP Address Pool"
-            setVariables:
-              - name: IP_ADDRESS_POOL
-
     charts:
       - name: metallb 
         version: 0.13.10
@@ -32,4 +26,3 @@ components:
           - manifests/ipaddresspool.yaml
           - manifests/l2advertisement.yaml
         namespace: metallb-system
-    
