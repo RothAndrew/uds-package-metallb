@@ -46,8 +46,10 @@ components:
         kustomizations:
           - kustomizations/
     images:
-      - registry1.dso.mil/ironbank/opensource/metallb/controller:v0.13.11
-      - registry1.dso.mil/ironbank/opensource/metallb/speaker:v0.13.11
+      # renovate: datasource=github-tags depName=metallb/metallb versioning=semver
+      - registry1.dso.mil/ironbank/opensource/metallb/controller:v0.13.10
+      # renovate: datasource=github-tags depName=metallb/metallb versioning=semver
+      - registry1.dso.mil/ironbank/opensource/metallb/speaker:v0.13.10
 
   - name: addresspools
     required: true
