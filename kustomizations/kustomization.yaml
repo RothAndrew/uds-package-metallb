@@ -5,11 +5,11 @@ images:
 - name: quay.io/metallb/controller
   newName: registry1.dso.mil/ironbank/opensource/metallb/controller
   # renovate: datasource=github-tags depName=metallb/metallb versioning=semver
-  newTag: v0.13.10
+  newTag: v0.13.11
 - name: quay.io/metallb/speaker
   newName: registry1.dso.mil/ironbank/opensource/metallb/speaker
   # renovate: datasource=github-tags depName=metallb/metallb versioning=semver
-  newTag: v0.13.10
+  newTag: v0.13.11
 
 patches:
   - target:
